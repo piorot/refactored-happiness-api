@@ -1,11 +1,10 @@
-"use strict";
-var Projects = require('./model');
+'use strict'
+var Projects = require('./model')
 
 exports.listAll = function (req, res) {
-    return Projects.find()
-
-};
+  return Projects.find()
+}
 
 exports.getProjectById = function (id) {
-    return Projects.find({ id: id }).then((projectArr) => projectArr[0]);
+  return Projects.find({ id: id }).then((projectArr) => projectArr[0])
 }
